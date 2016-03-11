@@ -19,13 +19,13 @@
   </style>
 </head>
 <body>
-<h1>九宫格解锁界面</h1>
-<canvas id="getLockLite" width="50" height="50">
-  您的浏览器不支持canvas！
-</canvas>
-<canvas id="gesturesUnlock" width="300" height="300">
-  您的浏览器不支持canvas！
-</canvas>
+  <h1>九宫格解锁界面</h1>
+  <canvas id="getLockLite" width="50" height="50">
+    您的浏览器不支持canvas！
+  </canvas>
+  <canvas id="gesturesUnlock" width="300" height="300">
+    您的浏览器不支持canvas！
+  </canvas>
 </body>
 </html>
 <script type="text/javascript" src="unlock.js"></script>
@@ -33,11 +33,5 @@
   var gesturesUnlock = new GesturesUnlock();
   gesturesUnlock.init(function () {
       console.log("您的手势密码是：" + gesturesUnlock.pwdResult);
-      // var getLockLite = new GetLockLite();
-      // getLockLite.render(gesturesUnlock.pwdResult);
   });
-  // var getLockLite = new GetLockLite();
-  // getLockLite.init(function () {
-  //     console.log("start");
-  // });
 </script>

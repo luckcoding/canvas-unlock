@@ -9,7 +9,7 @@
  * gesturesUnlock.init(func); // 初始化系统函数
  * var func = function () {}; // 声明回调函数，在回调函数中写您的逻辑代码
  */
-var GesturesUnlock = function () {
+function GesturesUnlock() {
     this.radius = 20; // 圆的半径
     this.arcColor = '#CCCCCC'; // 圆的颜色
     this.arcDidColor = '#FF8822'; // 手指触摸圆的颜色
@@ -201,7 +201,7 @@ GesturesUnlock.prototype.reNewLine = function (ctx) {
  * [GetLockLite description]
  * @param {[type]} callBack lite the mini view modal
  */
-var GetLockLite = function (callBack) {
+function GetLockLite (callBack) {
     this.radius = 5; // 圆的半径
     this.arcColor = '#E5E5E5'; // 圆的颜色
     this.arcLineWidth = 0; // 圆的粗细
@@ -279,7 +279,7 @@ function ninePoint(domId) {
  * color : 颜色
  * lineWidth : 线宽（如果存在该参数，则画空心圆，否则画实心圆）
  */
-drawArc = function(ctx, x, y, radius, color, lineWidth) {
+function drawArc (ctx, x, y, radius, color, lineWidth) {
     ctx.beginPath();
     ctx.arc(x, y, radius, 0, (Math.PI)*2, false);
     if (!lineWidth) {
@@ -302,7 +302,7 @@ drawArc = function(ctx, x, y, radius, color, lineWidth) {
  * color : 颜色
  * lineWidth : 外圆线宽
  */
-pointArc = function (ctx, x, y, radius, color, lineWidth) {
+function pointArc (ctx, x, y, radius, color, lineWidth) {
     drawArc(ctx, x, y, radius, color, lineWidth);
     drawArc(ctx, x, y, radius/3, color);
 }
@@ -312,7 +312,7 @@ pointArc = function (ctx, x, y, radius, color, lineWidth) {
  * 参数说明：
  * ctx : 画布引擎
  */
-ninePointArc = function (domId,ctx,radius,arcColor,arcLineWidth) {
+function ninePointArc (domId,ctx,radius,arcColor,arcLineWidth) {
     // 9个点的全部坐标
     var pointArr = ninePoint(domId);
     
